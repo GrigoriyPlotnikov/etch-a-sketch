@@ -2,7 +2,7 @@ function initialize() {
   "use strict";
 
   /**
-   * @typedef {HTMLInputElement}
+   * @type {HTMLInputElement}
    */
   const colorOverride = document.getElementById('colorOverride');
 
@@ -104,7 +104,7 @@ function initialize() {
   function mouseEnter(evnt) {
     /**
      * the exact pixel to color
-     * @typedef {HTMLDivElement}
+     * @type {HTMLDivElement}
      */
     const pixel = evnt.target;
 
@@ -129,6 +129,10 @@ function initialize() {
 
   function rightClick(evnt) {
     evnt.preventDefault();
+    /**
+     * the exact pixel to change opacity to
+     * @type {HTMLDivElement}
+     */
     const pixel = evnt.target;
     try {
       const opacity = Number(pixel.style.opacity);
@@ -146,6 +150,7 @@ function initialize() {
 
   /**
    * generates a random color
+   * thnx to https://stackoverflow.com/users/161832/anatoliy
    * @returns {string}
    */
   function getRandomColor() {
