@@ -1,0 +1,17 @@
+#content {
+  width: 90vmin;
+  height: 90vmin;
+  display: flex;
+  flex-direction: column;  
+  border: 1px solid black;
+}
+
+#content div.row {
+  flex:auto;
+  display: flex;
+  flex-direction: row;
+}
+
+#content div.cell {
+  flex:auto;
+}
